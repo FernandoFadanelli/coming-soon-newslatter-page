@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+  <!-- Flavicon icon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- Google fonts icon -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Fontawesome icons -->
+  <script src="https://kit.fontawesome.com/478d6b5730.js" crossorigin="anonymous"></script>
+
+  <!-- Stylesheet icon -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="mobile-header">
+    <img src="images/logo.svg" alt="base apperel logo">
+  </header>
+
+  <div class="content">
+
+    <div class="text-side">
+      <img class="bg-pattern" src="images/bg-pattern-desktop.svg" alt="circle pattern">
+      <img class="desktop-logo" src="images/logo.svg" alt="base apperel logo">
+
+      <h2>WE'RE</h2>
+      <h1>COMING SOON</h1>
+
+      <p>Hello fellow shoppers! We're currently building our new fashion store.
+        Add your email below to stay up-to-date with announcements and our launch deals.</p>
+
+      <form class="email-form" action="index.js" method="post" novalidate>
+
+        <div class="form-container">
+          <input class="email-input" type="email" name="email" placeholder="Email Address" required autofocus>
+
+          <i class="fas fa-exclamation-circle exclamation-circle"></i>
+
+          <button class="submit-button" type="submit" name="send-email">
+            <img src="images/icon-arrow.svg" alt="arrow pointing right">
+          </button>
+
+          <small class="error-message">Error message</small>
+
+        </div>
+      </form>
+    </div>
+
+    <div class="image-side">
+      <img srcset="images/hero-mobile.jpg 375w, images/hero-desktop.jpg 610w" sizes="(max-width: 900px) 375px, 610px" src="images/hero-desktop.jpg" alt="woman with a rose shirt">
+    </div>
+
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>

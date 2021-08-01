@@ -1,0 +1,252 @@
+:root {
+  --desaturated-red: hsl(0, 36%, 70%);
+  --soft-red: hsl(0, 93%, 68%);
+  --dark-grayish-red: hsl(0, 6%, 24%);
+  font-size: 16px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 245, 245, 1) 100%);
+}
+
+h1 {
+  color: var(--dark-grayish-red);
+  font-size: 4rem;
+  font-weight: 600;
+  letter-spacing: 1rem;
+  margin: 0;
+}
+
+h2 {
+  color: var(--desaturated-red);
+  font-size: 4rem;
+  font-weight: 300;
+  letter-spacing: 1rem;
+  margin: 100px 0 0 0;
+}
+
+p {
+  color: var(--desaturated-red);
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.mobile-header {
+  display: none;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+/* ######################
+        Text side
+####################### */
+.bg-pattern {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+
+.text-side {
+  padding: 5% 10%;
+  position: relative;
+  width: 450px;
+  overflow: hidden;
+}
+
+/* ######################
+      Form styling
+####################### */
+.form-container {
+  margin-top: 40px;
+  position: relative;
+}
+
+.email-input {
+  background: none;
+  border: 1px solid var(--desaturated-red);
+  border-radius: 25px;
+  color: var(--dark-grayish-red);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1rem;
+  outline: none;
+  padding: 0 0 0 30px;
+  height: 50px;
+  width: 85%;
+}
+
+.email-input::placeholder {
+  color: var(--desaturated-red);
+  opacity: 0.5;
+}
+
+/* Error exclamation circle */
+.exclamation-circle {
+  color: var(--soft-red);
+  font-size: 1.5rem;
+  position: absolute;
+  top: 13px;
+  right: 110px;
+  visibility: hidden;
+}
+
+.submit-button {
+  border: none;
+  border-radius: 25px;
+  background: rgb(248, 191, 191);
+  background: linear-gradient(135deg, rgba(248, 191, 191, 1) 0%, rgba(238, 140, 140, 1) 100%);
+  box-shadow: 0px 11px 19px 4px rgba(238, 140, 140, 0.33);
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0;
+  height: 100%;
+  width: 100px;
+}
+
+.submit-button:hover {
+  cursor: pointer;
+  background: rgb(248, 191, 191);
+}
+
+/* Error message when email is invalid */
+.error-message {
+  color: var(--soft-red);
+  position: absolute;
+  left: 32px;
+  top: 60px;
+  visibility: hidden;
+}
+
+/* Visibility of the error message when the error class is added to form-container when there is an error */
+.form-container.error .email-input {
+  border-color: var(--soft-red);
+  border-width: 2px;
+}
+
+.form-container.error .exclamation-circle {
+  visibility: visible;
+}
+
+.form-container.error .error-message{
+  visibility: visible;
+}
+
+/* ######################
+        Image side
+####################### */
+.image-side {
+  height: 100%;
+  overflow: hidden;
+  width: 640px;
+}
+
+.image-side img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+/* ######################
+    Styling for mobile
+####################### */
+@media screen and (max-width: 900px) {
+  body {
+    height: 100vh;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin: 0 30px 0 30px;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    margin: 60px 30px 0 30px;
+  }
+
+  p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 10px 30px;
+  }
+
+  /* ######################
+          Header
+  ####################### */
+  .mobile-header {
+    display: block;
+    margin: 30px 0;
+    padding-left: 30px;
+  }
+
+  .mobile-header img {
+    width: 100px;
+  }
+
+  /* Change flex direction to show image first */
+  .content {
+    flex-direction: column-reverse;
+    height: auto;
+  }
+
+  /* ######################
+          Text side
+  ####################### */
+  .desktop-logo {
+    display: none;
+  }
+
+  .bg-pattern {
+    display: none;
+  }
+
+  .text-side {
+    text-align: center;
+    padding: 0;
+    width: auto;
+  }
+
+  /* ######################
+        Form styling
+  ####################### */
+  .form-container {
+    margin: 40px auto 40px auto;
+    width: 280px;
+  }
+
+  .email-input {
+    padding-left: 10px;
+    width: 270px;
+  }
+
+  .exclamation-circle {
+    right: 65px;
+  }
+
+  .submit-button {
+    width: 70px;
+    right: -15px;
+  }
+
+  .error-message {
+    left: 12px;
+    top: 60px;
+  }
+
+  /* ######################
+          Image side
+  ####################### */
+  .image-side {
+    overflow: hidden;
+    width: 100%;
+    height: 250px;
+  }
+}
